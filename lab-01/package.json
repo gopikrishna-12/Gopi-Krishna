@@ -1,0 +1,26 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "Lab 1 – Node.js and Express Server for Backend Development Fundamentals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "start:http": "node http-server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend-fundamentals",
+    "lab-01",
+    "rest-api"
+  ],
+  "author": "PONDURI GOPI KRISHNA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
