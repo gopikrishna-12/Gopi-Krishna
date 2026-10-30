@@ -1,7 +1,13 @@
 # Lab 1 – Node.js and Express Server
 
-> **Live Deployment URL:** `[DEPLOYMENT_URL_PLACEHOLDER]` *(e.g., https://gopi-krishna-lab-01.onrender.com)*  
-> *Status: Deployment pending manual confirmation.*
+## Live Deployment (Render)
+
+The application is deployed live on Render:
+
+- **Base URL (Home):** [https://gopi-krishna.onrender.com/](https://gopi-krishna.onrender.com/)
+- **About Route:** [https://gopi-krishna.onrender.com/about](https://gopi-krishna.onrender.com/about)
+- **Current Date & Time:** [https://gopi-krishna.onrender.com/time](https://gopi-krishna.onrender.com/time)
+- **404 Error Found:** [https://gopi-krishna.onrender.com/unknown](https://gopi-krishna.onrender.com/unknown)
 
 ---
 

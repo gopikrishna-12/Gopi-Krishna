@@ -4,6 +4,17 @@ Welcome to the official coursework repository for **Backend Development Fundamen
 
 ---
 
+## Live Deployment (Render)
+
+The application is deployed live on Render:
+
+- **Base URL (Home):** [https://gopi-krishna.onrender.com/](https://gopi-krishna.onrender.com/)
+- **About Route:** [https://gopi-krishna.onrender.com/about](https://gopi-krishna.onrender.com/about)
+- **Current Date & Time:** [https://gopi-krishna.onrender.com/time](https://gopi-krishna.onrender.com/time)
+- **404 Error Found:** [https://gopi-krishna.onrender.com/unknown](https://gopi-krishna.onrender.com/unknown)
+
+---
+
 ## Student Details
 
 | Attribute | Details |
@@ -31,6 +42,10 @@ Gopi-Krishna/
     ├── .gitignore             # Excludes node_modules, .env, and system logs
     ├── README.md              # Detailed Lab 1 documentation & verification report
     └── screenshots/           # Verification screenshots directory
+        ├── home-endpoint.png  # Verified GET / screenshot
+        ├── about-endpoint.png # Verified GET /about screenshot
+        ├── time-endpoint.png  # Verified GET /time screenshot
+        ├── unknown-endpoint.png # Verified GET /unknown 404 screenshot
         └── README.md          # Screenshot capture guide and specifications
 ```
 
@@ -40,7 +55,7 @@ Gopi-Krishna/
 
 | Lab # | Lab Title | Directory | Status | Deployment Link |
 | :---: | :--- | :---: | :---: | :--- |
-| **01** | [Lab 1 – Node.js and Express Server](./lab-01/README.md) | [`lab-01/`](./lab-01/) | **Completed** | `[DEPLOYMENT_URL_PLACEHOLDER]` |
+| **01** | [Lab 1 – Node.js and Express Server](./lab-01/README.md) | [`lab-01/`](./lab-01/) | **Completed** | [Live on Render](https://gopi-krishna.onrender.com/) |
 | **02** | *Upcoming Lab* | *TBA* | *Pending* | — |
 | **03** | *Upcoming Lab* | *TBA* | *Pending* | — |
 
