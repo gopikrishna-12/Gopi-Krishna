@@ -134,24 +134,38 @@ npm run dev
 
 ## 7. Screenshots of Endpoint Verification
 
-The screenshots below provide verification of the four primary endpoints tested locally or on the deployed instance.
+The screenshots below provide verification of the four primary endpoints tested locally and on the live deployed Render instance.
 
 > *Instructions to capture and update images are documented in [`screenshots/README.md`](./screenshots/README.md).*
 
 ### 1. Home Endpoint (`GET /`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna.onrender.com/](https://gopi-krishna.onrender.com/)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![Home Endpoint Screenshot](./screenshots/home-endpoint.png)
 
+---
+
 ### 2. About Endpoint (`GET /about`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna.onrender.com/about](https://gopi-krishna.onrender.com/about)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![About Endpoint Screenshot](./screenshots/about-endpoint.png)
 
+---
+
 ### 3. Time Endpoint (`GET /time`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna.onrender.com/time](https://gopi-krishna.onrender.com/time)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![Time Endpoint Screenshot](./screenshots/time-endpoint.png)
 
+---
+
 ### 4. Unknown Endpoint (`GET /unknown` - 404 Handling)
-Expected HTTP Status: `404 Not Found`  
+- **Render Live URL:** [https://gopi-krishna.onrender.com/unknown](https://gopi-krishna.onrender.com/unknown)  
+- **Expected HTTP Status:** `404 Not Found`  
+
 ![Unknown Route 404 Screenshot](./screenshots/unknown-endpoint.png)
 
 ---
