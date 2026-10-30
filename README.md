@@ -50,7 +50,7 @@ Gopi-Krishna/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/[YOUR-USERNAME]/Gopi-Krishna.git
+git clone https://github.com/gopikrishna-12/Gopi-Krishna.git
 cd Gopi-Krishna
 ```
 
