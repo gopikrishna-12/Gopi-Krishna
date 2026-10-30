@@ -8,8 +8,8 @@
 ## Student Information
 
 - **Student Name:** PONDURI GOPI KRISHNA
-- **Registration Number:** `[REGISTRATION_NUMBER_PLACEHOLDER]`
-- **Section:** `[SECTION_PLACEHOLDER]`
+- **Registration Number:** `252U1R1196`
+- **Section:** `CSE-2D`
 - **Course:** Backend Development Fundamentals
 - **Lab Number:** Lab 01
 
@@ -81,7 +81,7 @@ The Express server exposes the following endpoints:
 | HTTP Method | Route Path | Description | Expected Status Code | Response Format | Example Response |
 | :--- | :--- | :--- | :---: | :--- | :--- |
 | `GET` | `/` | Root endpoint displaying a welcome message | `200 OK` | `text/html; charset=utf-8` | `"Welcome to Lab 1 - Node.js and Express Server!"` |
-| `GET` | `/about` | Returns student details | `200 OK` | `application/json` | `{"studentName": "PONDURI GOPI KRISHNA", "registrationNumber": "[LEAVE A PLACEHOLDER]", "section": "[LEAVE A PLACEHOLDER]"}` |
+| `GET` | `/about` | Returns student details | `200 OK` | `application/json` | `{"studentName": "PONDURI GOPI KRISHNA", "registrationNumber": "252U1R1196", "section": "CSE-2D"}` |
 | `GET` | `/time` | Returns the current server timestamp | `200 OK` | `application/json` | `{"currentTime": "2026-10-30T10:15:00.000Z", "formattedTime": "Fri Oct 30 2026 ..."}` |
 | `GET` / `ALL` | `/*` (e.g., `/unknown`) | Catch-all 404 error handler for undefined routes | `404 Not Found` | `application/json` | `{"message": "Route not found"}` |
 
@@ -177,4 +177,3 @@ In this lab, we successfully built and contrasted two backend architectures:
 - A production-ready REST API server using Express.js featuring custom routes, JSON handling, and 404 middleware.
 
 The project demonstrates clean separation of concerns, best practices for dependency management, environment variable adaptability for cloud deployment, and comprehensive API documentation.
-

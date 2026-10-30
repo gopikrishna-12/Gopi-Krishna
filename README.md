@@ -9,8 +9,8 @@ Welcome to the official coursework repository for **Backend Development Fundamen
 | Attribute | Details |
 | :--- | :--- |
 | **Student Name** | PONDURI GOPI KRISHNA |
-| **Registration Number** | `[REGISTRATION_NUMBER_PLACEHOLDER]` |
-| **Section** | `[SECTION_PLACEHOLDER]` |
+| **Registration Number** | `252U1R1196` |
+| **Section** | `CSE-2D` |
 | **Repository Name** | `Gopi-Krishna` |
 | **Primary Technology** | Node.js & Express.js |
 
@@ -62,4 +62,3 @@ npm start
 ```
 
 For detailed instructions, endpoint testing, and deployment steps for each lab, refer to the respective lab directory README.
-

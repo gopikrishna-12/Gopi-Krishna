@@ -2,8 +2,8 @@
  * ============================================================================
  * Lab 1 – Node.js and Express Server
  * Student Name: PONDURI GOPI KRISHNA
- * Registration Number: [LEAVE A PLACEHOLDER]
- * Section: [LEAVE A PLACEHOLDER]
+ * Registration Number: 252U1R1196
+ * Section: CSE-2D
  * ============================================================================
  * 
  * Objective:
@@ -44,8 +44,8 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.status(200).json({
     studentName: 'PONDURI GOPI KRISHNA',
-    registrationNumber: '[LEAVE A PLACEHOLDER]',
-    section: '[LEAVE A PLACEHOLDER]'
+    registrationNumber: '252U1R1196',
+    section: 'CSE-2D'
   });
 });
 
@@ -92,4 +92,3 @@ app.listen(PORT, () => {
 
 // Export app for modularity and testing purposes
 module.exports = app;
-

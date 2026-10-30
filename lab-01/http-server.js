@@ -2,8 +2,8 @@
  * ============================================================================
  * Lab 1 - Plain Node.js HTTP Server
  * Student Name: PONDURI GOPI KRISHNA
- * Registration Number: [LEAVE A PLACEHOLDER]
- * Section: [LEAVE A PLACEHOLDER]
+ * Registration Number: 252U1R1196
+ * Section: CSE-2D
  * ============================================================================
  * 
  * Objective:
@@ -38,4 +38,3 @@ server.listen(PORT, () => {
   console.log(` URL : http://localhost:${PORT}`);
   console.log(`====================================================`);
 });
-
