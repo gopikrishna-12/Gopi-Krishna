@@ -4,9 +4,9 @@ Welcome to the official coursework repository for **Backend Development Fundamen
 
 ---
 
-## Live Deployment (Render)
+## Live Deployment (Render - Lab 1)
 
-The application is deployed live on Render:
+The Lab 1 application is deployed live on Render:
 
 - **Base URL (Home):** [https://gopi-krishna.onrender.com/](https://gopi-krishna.onrender.com/)
 - **About Route:** [https://gopi-krishna.onrender.com/about](https://gopi-krishna.onrender.com/about)
@@ -23,7 +23,7 @@ The application is deployed live on Render:
 | **Registration Number** | `252U1R1196` |
 | **Section** | `CSE-2D` |
 | **Repository Name** | `Gopi-Krishna` |
-| **Primary Technology** | Node.js & Express.js |
+| **Primary Technologies** | Node.js, Express.js & SQLite3 |
 
 ---
 
@@ -34,29 +34,39 @@ Gopi-Krishna/
 │
 ├── README.md                  # Root course repository documentation & lab index
 │
-└── lab-01/                    # Lab 1: Node.js and Express Server
-    ├── server.js              # Express.js REST API server with routes and 404 middleware
-    ├── http-server.js         # Plain Node.js HTTP server using core 'http' module
-    ├── package.json           # Dependencies, metadata, and scripts
-    ├── package-lock.json      # Locked dependency tree
-    ├── .gitignore             # Excludes node_modules, .env, and system logs
-    ├── README.md              # Detailed Lab 1 documentation & verification report
+├── lab-01/                    # Lab 1: Node.js and Express Server
+│   ├── server.js              # Express.js REST API server with routes and 404 middleware
+│   ├── http-server.js         # Plain Node.js HTTP server using core 'http' module
+│   ├── package.json           # Dependencies, metadata, and scripts
+│   ├── package-lock.json      # Locked dependency tree
+│   ├── .gitignore             # Excludes node_modules, .env, and system logs
+│   ├── README.md              # Detailed Lab 1 documentation & verification report
+│   └── screenshots/           # Verification screenshots directory
+│       ├── home-endpoint.png  # Verified GET / screenshot
+│       ├── about-endpoint.png # Verified GET /about screenshot
+│       ├── time-endpoint.png  # Verified GET /time screenshot
+│       ├── unknown-endpoint.png # Verified GET /unknown 404 screenshot
+│       └── README.md          # Screenshot capture guide and specifications
+│
+└── lab-02/                    # Lab 2: SQLite Database and CRUD Routes
+    ├── server.js              # Express REST server with full CRUD and SQL injection protection
+    ├── package.json           # sqlite, sqlite3, express, nodemon
+    ├── package-lock.json      # Locked dependencies
+    ├── database.db            # SQLite database file containing 10 seeded book records
+    ├── .gitignore             # Excludes node_modules and environment files
+    ├── README.md              # Comprehensive Lab 2 documentation & CRUD report
     └── screenshots/           # Verification screenshots directory
-        ├── home-endpoint.png  # Verified GET / screenshot
-        ├── about-endpoint.png # Verified GET /about screenshot
-        ├── time-endpoint.png  # Verified GET /time screenshot
-        ├── unknown-endpoint.png # Verified GET /unknown 404 screenshot
-        └── README.md          # Screenshot capture guide and specifications
+        └── README.md          # 9-point screenshot checklist and capture guide
 ```
 
 ---
 
 ## Lab Index
 
-| Lab # | Lab Title | Directory | Status | Deployment Link |
+| Lab # | Lab Title | Directory | Status | Deployment Link / Notes |
 | :---: | :--- | :---: | :---: | :--- |
 | **01** | [Lab 1 – Node.js and Express Server](./lab-01/README.md) | [`lab-01/`](./lab-01/) | **Completed** | [Live on Render](https://gopi-krishna.onrender.com/) |
-| **02** | *Upcoming Lab* | *TBA* | *Pending* | — |
+| **02** | [Lab 2 – SQLite Database and CRUD Routes](./lab-02/README.md) | [`lab-02/`](./lab-02/) | **Completed** | [Local & Cloud Docs](./lab-02/README.md#lab-2--sqlite-database-and-crud-routes) |
 | **03** | *Upcoming Lab* | *TBA* | *Pending* | — |
 
 ---
@@ -69,9 +79,16 @@ git clone https://github.com/gopikrishna-12/Gopi-Krishna.git
 cd Gopi-Krishna
 ```
 
-### 2. Run a Specific Lab (e.g., Lab 01)
+### 2. Run Lab 01 (Node.js & Express Basics)
 ```bash
 cd lab-01
+npm install
+npm start
+```
+
+### 3. Run Lab 02 (SQLite & CRUD API)
+```bash
+cd lab-02
 npm install
 npm start
 ```
