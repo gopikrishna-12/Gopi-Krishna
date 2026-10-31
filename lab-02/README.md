@@ -1,8 +1,16 @@
 # Lab 2 – SQLite Database and CRUD Routes
 
-> **Deployment Status:** Architecture Prepared (Local & Persistent Cloud Ready)  
-> **Evaluation of SQLite File Persistence:**  
-> Free cloud container hosts (such as Render Free Web Services) use an **ephemeral filesystem**. While the application starts and runs normally, any database modifications (POST, PUT, DELETE written to `database.db`) are discarded when the container sleeps or redeploys. For persistent SQLite hosting, a platform supporting **Persistent Disks / Volumes** (such as Render Disks on paid plans, Fly.io volumes, Railway with volume mounts) or stateful development environments (such as **NxtWave Cloud IDE** or dedicated VPS) is recommended.
+## Live Deployment (Render)
+
+The application is deployed live on Render:
+
+- **Base URL (Home):** [https://gopi-krishna-lab-02.onrender.com/](https://gopi-krishna-lab-02.onrender.com/)
+- **Get All Books:** [https://gopi-krishna-lab-02.onrender.com/books/](https://gopi-krishna-lab-02.onrender.com/books/)
+- **Get Single Book (ID 1):** [https://gopi-krishna-lab-02.onrender.com/books/1/](https://gopi-krishna-lab-02.onrender.com/books/1/)
+- **404 Error Found:** [https://gopi-krishna-lab-02.onrender.com/books/999/](https://gopi-krishna-lab-02.onrender.com/books/999/)
+
+> **Evaluation of SQLite File Persistence on Cloud:**  
+> Free cloud container hosts (such as Render Free Web Services) use an **ephemeral filesystem**. While the application starts and runs normally, any runtime database modifications (POST, PUT, DELETE written to `database.db`) are discarded when the container sleeps or redeploys. For production persistent SQLite hosting, a platform supporting **Persistent Disks / Volumes** (such as Render Disks on paid plans, Fly.io volumes, Railway with volume mounts) or stateful development environments (such as **NxtWave Cloud IDE** or dedicated VPS) is recommended.
 
 ---
 
@@ -44,6 +52,7 @@ The objectives of Lab 2 are:
 - **Development Tool:** [Nodemon](https://nodemon.io/) (Live server reloading)
 - **API Testing:** Postman & Node.js HTTP test suites
 - **Version Control:** Git & GitHub
+- **Deployment Platform:** Render
 
 ---
 
@@ -266,44 +275,74 @@ npm start
 # Development Mode with Live Auto-reload (Nodemon):
 npm run dev
 ```
-*Server runs at: `http://localhost:3000/`*  
-*Books endpoint: `http://localhost:3000/books/`*
+*Local Server: `http://localhost:3000/`*  
+*Cloud Server: `https://gopi-krishna-lab-02.onrender.com/`*
 
 ---
 
 ## 11. Screenshots of Endpoint & Database Verification
 
-> *Capture guidelines and naming requirements are documented in [`screenshots/README.md`](./screenshots/README.md).*
+The screenshots below verify all primary CRUD operations tested both locally and on the live deployed Render instance.
+
+> *Capture guidelines and verification checklist are documented in [`screenshots/README.md`](./screenshots/README.md).*
 
 ### 1. GET All Books (`GET /books/`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/](https://gopi-krishna-lab-02.onrender.com/books/)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![GET All Books Screenshot](./screenshots/01-get-all-books.png)
 
+---
+
 ### 2. GET One Book (`GET /books/1/`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/1/](https://gopi-krishna-lab-02.onrender.com/books/1/)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![GET One Book Screenshot](./screenshots/02-get-one-book.png)
 
+---
+
 ### 3. POST New Book (`POST /books/`)
-Expected HTTP Status: `201 Created`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/](https://gopi-krishna-lab-02.onrender.com/books/)  
+- **Expected HTTP Status:** `201 Created`  
+
 ![POST New Book Screenshot](./screenshots/03-post-new-book.png)
 
+---
+
 ### 4. PUT Update Book (`PUT /books/:bookId/`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/13/](https://gopi-krishna-lab-02.onrender.com/books/13/)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![PUT Update Book Screenshot](./screenshots/04-put-update-book.png)
 
+---
+
 ### 5. DELETE Book (`DELETE /books/:bookId/`)
-Expected HTTP Status: `200 OK`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/13/](https://gopi-krishna-lab-02.onrender.com/books/13/)  
+- **Expected HTTP Status:** `200 OK`  
+
 ![DELETE Book Screenshot](./screenshots/05-delete-book.png)
 
+---
+
 ### 6. 404 Error Handling (`GET /books/999/` or Unknown Route)
-Expected HTTP Status: `404 Not Found`  
+- **Render Live URL:** [https://gopi-krishna-lab-02.onrender.com/books/999/](https://gopi-krishna-lab-02.onrender.com/books/999/)  
+- **Expected HTTP Status:** `404 Not Found`  
+
 ![404 Error Response Screenshot](./screenshots/06-404-error-response.png)
+
+---
 
 ### 7. SQLite Database: Inserted Record Verification
 ![SQLite Inserted Record Verification](./screenshots/07-sqlite-inserted-records.png)
 
+---
+
 ### 8. SQLite Database: Updated Record Verification
 ![SQLite Updated Record Verification](./screenshots/08-sqlite-updated-records.png)
+
+---
 
 ### 9. SQLite Database: Deleted Record Verification
 ![SQLite Deleted Record Verification](./screenshots/09-sqlite-deleted-records.png)
@@ -320,17 +359,16 @@ Expected HTTP Status: `404 Not Found`
    - *Problem:* Concatenating route parameters like `req.params.bookId` directly into query strings exposed the database to SQL injection attacks.
    - *Solution:* Used parameterized queries `?` with parameter arrays passed to `db.get()`, `db.run()`, ensuring SQLite treats user inputs strictly as literals.
 
-3. **Ephemeral Cloud Storage vs SQLite Persistence:**
+3. **Render Linux Deployment: `GLIBC_2.38 not found`:**
+   - *Problem:* `sqlite3` v6.0.1 required `GLIBC_2.38`, which is absent from Render's Ubuntu 22.04 LTS container runtime (`GLIBC 2.35`), causing deployment crashes during native addon loading.
+   - *Solution:* Pinned `sqlite3` to production LTS version `5.1.7`, whose prebuilt Linux binaries are fully compatible with Render's GLIBC runtime.
+
+4. **Ephemeral Cloud Storage vs SQLite Persistence:**
    - *Problem:* Deploying an SQLite file to free serverless cloud platforms results in data loss whenever the server restarts or scales down.
    - *Solution:* Documented architectural trade-offs: evaluated platforms with Persistent Disks (e.g. Render with Persistent Disks, NxtWave Cloud IDE, or migrating to PostgreSQL for stateless serverless).
-
-4. **Proper HTTP Status Code Standards:**
-   - *Problem:* Returning HTTP 200 for newly created resources and missing records violates REST conventions.
-   - *Solution:* Explicitly returned `201 Created` for `POST /books/` and `404 Not Found` when a requested resource does not exist.
 
 ---
 
 ## 13. Conclusion
 
-Lab 2 successfully implemented a fully functional RESTful CRUD API server utilizing Node.js, Express.js, and SQLite. The implementation demonstrates robust database connection management, relational schema modeling, parameterized SQL injection prevention, strict request validation, and comprehensive automated testing.
-
+Lab 2 successfully implemented and deployed a fully functional RESTful CRUD API server utilizing Node.js, Express.js, and SQLite. The implementation demonstrates robust database connection management, relational schema modeling, parameterized SQL injection prevention, strict request validation, and live cloud deployment on Render.
