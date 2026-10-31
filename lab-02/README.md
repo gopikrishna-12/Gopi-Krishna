@@ -230,17 +230,17 @@ sqlite3 database.db "SELECT * FROM book;"
 
 ### 2. Verify Record After Insertion:
 ```bash
-sqlite3 database.db "SELECT * FROM book WHERE id = 11;"
+sqlite3 database.db "SELECT * FROM book WHERE id = 13;"
 ```
 
 ### 3. Verify Record After Update:
 ```bash
-sqlite3 database.db "SELECT * FROM book WHERE id = 11;"
+sqlite3 database.db "SELECT * FROM book WHERE id = 13;"
 ```
 
 ### 4. Verify Record After Deletion:
 ```bash
-sqlite3 database.db "SELECT * FROM book WHERE id = 11;"
+sqlite3 database.db "SELECT * FROM book WHERE id = 13;"
 # Output will be empty, confirming the record was removed.
 ```
 
