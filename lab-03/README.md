@@ -1,6 +1,16 @@
 # Lab 3 – REST API, Query Parameters, Validation and Debugging
 
-> **Deployment Status:** Architecture Prepared (Local & Persistent Cloud Ready)  
+> **Live Deployment (Render):** [https://gopi-krishna-lab-03.onrender.com/](https://gopi-krishna-lab-03.onrender.com/)  
+> **Live API Endpoints:**
+> - Base URL: [https://gopi-krishna-lab-03.onrender.com/](https://gopi-krishna-lab-03.onrender.com/)
+> - All Books: [https://gopi-krishna-lab-03.onrender.com/books](https://gopi-krishna-lab-03.onrender.com/books)
+> - Single Book (ID 1): [https://gopi-krishna-lab-03.onrender.com/books/1](https://gopi-krishna-lab-03.onrender.com/books/1)
+> - Search Filter: [https://gopi-krishna-lab-03.onrender.com/books?search_q=Clean](https://gopi-krishna-lab-03.onrender.com/books?search_q=Clean)
+> - Sort by Price: [https://gopi-krishna-lab-03.onrender.com/books?order_by=price&order=DESC](https://gopi-krishna-lab-03.onrender.com/books?order_by=price&order=DESC)
+> - Limit & Offset: [https://gopi-krishna-lab-03.onrender.com/books?offset=2&limit=3](https://gopi-krishna-lab-03.onrender.com/books?offset=2&limit=3)
+> - Price Range Filter: [https://gopi-krishna-lab-03.onrender.com/books?min_price=400&max_price=800](https://gopi-krishna-lab-03.onrender.com/books?min_price=400&max_price=800)
+> - 404 Route: [https://gopi-krishna-lab-03.onrender.com/books/999](https://gopi-krishna-lab-03.onrender.com/books/999)  
+>
 > **Evaluation of SQLite File Persistence:**  
 > Free cloud container hosts (such as Render Free Web Services) use an **ephemeral filesystem**. While the application starts and runs normally, any runtime database modifications (POST, PUT, DELETE written to `database.db`) are discarded when the container sleeps or redeploys. For production persistent SQLite hosting, a platform supporting **Persistent Disks / Volumes** (such as Render Disks on paid plans, Fly.io volumes, Railway with volume mounts) or stateful development environments (such as **NxtWave Cloud IDE** or dedicated VPS) is recommended.
 

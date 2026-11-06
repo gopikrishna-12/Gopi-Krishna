@@ -19,8 +19,15 @@ Welcome to the official coursework repository for **Backend Development Fundamen
 - **404 Error Found:** [https://gopi-krishna-lab-02.onrender.com/books/999/](https://gopi-krishna-lab-02.onrender.com/books/999/)
 
 ### Lab 3: REST API, Query Parameters, Validation and Debugging
+- **Base URL (Home):** [https://gopi-krishna-lab-03.onrender.com/](https://gopi-krishna-lab-03.onrender.com/)
+- **Get All Books:** [https://gopi-krishna-lab-03.onrender.com/books](https://gopi-krishna-lab-03.onrender.com/books)
+- **Get Single Book (ID 1):** [https://gopi-krishna-lab-03.onrender.com/books/1](https://gopi-krishna-lab-03.onrender.com/books/1)
+- **Search Query (`search_q`):** [https://gopi-krishna-lab-03.onrender.com/books?search_q=Clean](https://gopi-krishna-lab-03.onrender.com/books?search_q=Clean)
+- **Sort by Price (`order_by & order`):** [https://gopi-krishna-lab-03.onrender.com/books?order_by=price&order=DESC](https://gopi-krishna-lab-03.onrender.com/books?order_by=price&order=DESC)
+- **Pagination (`offset & limit`):** [https://gopi-krishna-lab-03.onrender.com/books?offset=2&limit=3](https://gopi-krishna-lab-03.onrender.com/books?offset=2&limit=3)
+- **Price Range Filter (`min_price & max_price`):** [https://gopi-krishna-lab-03.onrender.com/books?min_price=400&max_price=800](https://gopi-krishna-lab-03.onrender.com/books?min_price=400&max_price=800)
+- **404 Error Found:** [https://gopi-krishna-lab-03.onrender.com/books/999](https://gopi-krishna-lab-03.onrender.com/books/999)
 - **Documentation & Verification Report:** [lab-03/README.md](./lab-03/README.md)
-- **Deployment Status:** Ready for deployment (see deployment instructions in [lab-03/README.md](./lab-03/README.md#19-cloud-deployment-guide))
 
 ---
 
@@ -95,7 +102,7 @@ Gopi-Krishna/
 | :---: | :--- | :---: | :---: | :--- |
 | **01** | [Lab 1 – Node.js and Express Server](./lab-01/README.md) | [`lab-01/`](./lab-01/) | **Completed** | [Live on Render](https://gopi-krishna.onrender.com/) |
 | **02** | [Lab 2 – SQLite Database and CRUD Routes](./lab-02/README.md) | [`lab-02/`](./lab-02/) | **Completed** | [Live on Render](https://gopi-krishna-lab-02.onrender.com/) |
-| **03** | [Lab 3 – REST API, Query Params, Validation & Debugging](./lab-03/README.md) | [`lab-03/`](./lab-03/) | **Completed** | Ready to Deploy |
+| **03** | [Lab 3 – REST API, Query Params, Validation & Debugging](./lab-03/README.md) | [`lab-03/`](./lab-03/) | **Completed** | [Live on Render](https://gopi-krishna-lab-03.onrender.com/) |
 
 ---
 
