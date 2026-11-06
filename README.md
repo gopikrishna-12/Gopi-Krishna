@@ -18,6 +18,10 @@ Welcome to the official coursework repository for **Backend Development Fundamen
 - **Get Single Book (ID 1):** [https://gopi-krishna-lab-02.onrender.com/books/1/](https://gopi-krishna-lab-02.onrender.com/books/1/)
 - **404 Error Found:** [https://gopi-krishna-lab-02.onrender.com/books/999/](https://gopi-krishna-lab-02.onrender.com/books/999/)
 
+### Lab 3: REST API, Query Parameters, Validation and Debugging
+- **Documentation & Verification Report:** [lab-03/README.md](./lab-03/README.md)
+- **Deployment Status:** Ready for deployment (see deployment instructions in [lab-03/README.md](./lab-03/README.md#19-cloud-deployment-guide))
+
 ---
 
 ## Student Details
@@ -53,24 +57,34 @@ Gopi-Krishna/
 │       ├── unknown-endpoint.png # Verified GET /unknown 404 screenshot
 │       └── README.md          # Screenshot capture guide and specifications
 │
-└── lab-02/                    # Lab 2: SQLite Database and CRUD Routes
-    ├── server.js              # Express REST server with full CRUD and SQL injection protection
-    ├── package.json           # sqlite, sqlite3, express, nodemon
-    ├── package-lock.json      # Locked dependencies
-    ├── database.db            # SQLite database file containing 10 seeded book records
-    ├── .gitignore             # Excludes node_modules and environment files
-    ├── README.md              # Comprehensive Lab 2 documentation & CRUD report
+├── lab-02/                    # Lab 2: SQLite Database and CRUD Routes
+│   ├── server.js              # Express REST server with full CRUD and SQL injection protection
+│   ├── package.json           # sqlite, sqlite3, express, nodemon
+│   ├── package-lock.json      # Locked dependencies
+│   ├── database.db            # SQLite database file containing 10 seeded book records
+│   ├── .gitignore             # Excludes node_modules and environment files
+│   ├── README.md              # Comprehensive Lab 2 documentation & CRUD report
+│   └── screenshots/           # Verification screenshots directory
+│       ├── 01-get-all-books.png             # Verified GET /books/ screenshot
+│       ├── 02-get-one-book.png              # Verified GET /books/1/ screenshot
+│       ├── 03-post-new-book.png             # Verified POST /books/ screenshot
+│       ├── 04-put-update-book.png           # Verified PUT /books/:id/ screenshot
+│       ├── 05-delete-book.png               # Verified DELETE /books/:id/ screenshot
+│       ├── 06-404-error-response.png        # Verified 404 error screenshot
+│       ├── 07-sqlite-inserted-records.png   # Verified SQLite CLI INSERT screenshot
+│       ├── 08-sqlite-updated-records.png    # Verified SQLite CLI UPDATE screenshot
+│       ├── 09-sqlite-deleted-records.png    # Verified SQLite CLI DELETE screenshot
+│       └── README.md                        # 9-point screenshot checklist and capture guide
+│
+└── lab-03/                    # Lab 3: REST API, Query Parameters, Validation & Debugging
+    ├── server.js              # Advanced Express REST server with search, filters, sorting & validation
+    ├── package.json           # sqlite, sqlite3 (pinned 5.1.7), express, nodemon
+    ├── package-lock.json      # Locked dependency tree
+    ├── database.db            # SQLite database with 10 seeded books
+    ├── .gitignore             # Excludes node_modules, .env, and logs
+    ├── README.md              # 22-section comprehensive Lab 3 documentation & debugging guide
     └── screenshots/           # Verification screenshots directory
-        ├── 01-get-all-books.png             # Verified GET /books/ screenshot
-        ├── 02-get-one-book.png              # Verified GET /books/1/ screenshot
-        ├── 03-post-new-book.png             # Verified POST /books/ screenshot
-        ├── 04-put-update-book.png           # Verified PUT /books/:id/ screenshot
-        ├── 05-delete-book.png               # Verified DELETE /books/:id/ screenshot
-        ├── 06-404-error-response.png        # Verified 404 error screenshot
-        ├── 07-sqlite-inserted-records.png   # Verified SQLite CLI INSERT screenshot
-        ├── 08-sqlite-updated-records.png    # Verified SQLite CLI UPDATE screenshot
-        ├── 09-sqlite-deleted-records.png    # Verified SQLite CLI DELETE screenshot
-        └── README.md                        # 9-point screenshot checklist and capture guide
+        └── README.md          # 13-point screenshot capture checklist and instructions
 ```
 
 ---
@@ -81,7 +95,7 @@ Gopi-Krishna/
 | :---: | :--- | :---: | :---: | :--- |
 | **01** | [Lab 1 – Node.js and Express Server](./lab-01/README.md) | [`lab-01/`](./lab-01/) | **Completed** | [Live on Render](https://gopi-krishna.onrender.com/) |
 | **02** | [Lab 2 – SQLite Database and CRUD Routes](./lab-02/README.md) | [`lab-02/`](./lab-02/) | **Completed** | [Live on Render](https://gopi-krishna-lab-02.onrender.com/) |
-| **03** | *Upcoming Lab* | *TBA* | *Pending* | — |
+| **03** | [Lab 3 – REST API, Query Params, Validation & Debugging](./lab-03/README.md) | [`lab-03/`](./lab-03/) | **Completed** | Ready to Deploy |
 
 ---
 
@@ -105,6 +119,15 @@ npm start
 cd lab-02
 npm install
 npm start
+```
+
+### 4. Run Lab 03 (Query Parameters, Validation & Debugging)
+```bash
+cd lab-03
+npm install
+npm start
+# Alternatively for live reloading:
+npm run dev
 ```
 
 For detailed instructions, endpoint testing, and deployment steps for each lab, refer to the respective lab directory README.
